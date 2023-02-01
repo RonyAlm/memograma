@@ -7,14 +7,15 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
-let timerInicial = 30;
+let timer = 60;
+let timerInicial = 60;
 let tiempoRegresivoId = null
 
 //
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('tiempoRestante');
+let btnReiniciar = document.getElementById('btn-reiniciar');
 
 //Generación de números aleatorios
 let num = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
@@ -29,6 +30,7 @@ function contarTiempo() {
         if (timer == 0) {
             clearInterval(tiempoRegresivoId);
             bloquearTarjetas();
+            btnReiniciar.hidden = false;
         }
     }, 1000);
 }
@@ -40,6 +42,11 @@ function bloquearTarjetas() {
         tarjetasBloqueada.disabled = true;
     }
 }
+
+btnReiniciar.addEventListener('click', ()=>{
+    console.log(btnReiniciar);
+    location.reload();
+});
 
 //Función Principal
 function destapar(id) {
@@ -84,6 +91,7 @@ function destapar(id) {
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😱`;
                 mostrarTiempo.innerHTML = `Fantástico! Sólo tardaste ${timerInicial - timer} segundos `;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 🤟😎 `;
+                btnReiniciar.hidden = false;
             }
 
         } else {
