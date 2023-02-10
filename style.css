@@ -82,13 +82,6 @@ footer {
     background-color: #60218b;
 }
 
-.btn-pagina {
-    padding: 12px 0px 12px 0px;
-    background-color: #60218b;
-    width: 100%;
-    text-align: center;
-    border-radius: 5px;
-}
 
 a {
     text-decoration: none;
@@ -101,6 +94,14 @@ img {
 
 p {
     text-align: center;
+}
+
+.btn-pagina {
+    padding: 12px 0px 12px 0px;
+    background-color: #60218b;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* 12 */
