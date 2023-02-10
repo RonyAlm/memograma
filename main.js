@@ -17,6 +17,7 @@ let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('tiempoRestante');
 let btnReiniciar = document.getElementById('btn-reiniciar');
 let btnPagina = document.getElementById('btn-animales');
+let btnPaginaId = document.getElementById('btn-pagina-id');
 
 //Generación de números aleatorios
 let num = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
@@ -39,9 +40,9 @@ function contarTiempo() {
 function bloquearTarjetas() {
     for (let i = 0; i <= 15; i++) {
         let tarjetasBloqueada = document.getElementById(i);
-        if (btnPagina.value == 1) {
+        if (btnPaginaId.dataset.value == 1) {
             tarjetasBloqueada.innerHTML =`<img src="./img/${num[i]}.png" alt"">`;
-        } else if (btnPagina.value == 2){
+        } else if (btnPaginaId.dataset.value == 2){
             tarjetasBloqueada.innerHTML =`<img src="./img/paisajes/${num[i]}.png" alt"">`;
         }
         tarjetasBloqueada.disabled = true;
@@ -53,13 +54,9 @@ btnReiniciar.addEventListener('click', ()=>{
     location.reload();
 });
 
-// btnPagina.addEventListener('click', ()=>{
-//     console.log(btnPagina.value);
-//     if (btnPagina.value == 1) {
-//         window.location.href = "paisajes.html";
-//     } else if (btnPagina.value == 2){
-//         window.location.href = "index.html";
-//     }
+// btnPaginaId.addEventListener('click', ()=>{
+//     console.log(btnPaginaId.dataset.value);
+
 // });
 
 
@@ -79,9 +76,9 @@ function destapar(id) {
         //Mostrar primer número
         tarjeta1 = document.getElementById(id);
         primerResultado = num[id]
-        if (btnPagina.value == 1) {
+        if (btnPaginaId.dataset.value == 1) {
             tarjeta1.innerHTML = `<img src="./img/${primerResultado}.png" alt"">` ;
-        } else if (btnPagina.value == 2){
+        } else if (btnPaginaId.dataset.value == 2){
             tarjeta1.innerHTML = `<img src="./img/paisajes/${primerResultado}.png" alt"">` ;
         }
 
@@ -91,9 +88,9 @@ function destapar(id) {
         //Mostrar segundo número
         tarjeta2 = document.getElementById(id);
         segundoResultado = num[id]
-        if (btnPagina.value == 1) {
+        if (btnPaginaId.dataset.value == 1) {
             tarjeta2.innerHTML = `<img src="./img/${segundoResultado}.png" alt"">`;
-        } else if (btnPagina.value == 2){
+        } else if (btnPaginaId.dataset.value == 2){
             tarjeta2.innerHTML = `<img src="./img/paisajes/${segundoResultado}.png" alt"">`;
         }
 

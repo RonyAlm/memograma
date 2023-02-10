@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-position: top left;
     /* background-position: bottom right; */
-    background-size:14rem;
+    background-size: 14rem;
     background-color: rgba(0, 172, 238, 1);
     /* background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%); */
     font-family: sans-serif;
@@ -16,7 +16,7 @@ main {
     display: flex;
     align-items: center; */
     max-width: 1000px;
-    margin: 100px auto 50px;
+    margin: 50px auto 50px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -73,13 +73,21 @@ h2 {
 }
 
 footer {
-    
+
     text-align: center;
     /* padding: 2rem 5rem 2rem 5rem;
     background-image: url("./img/Inferior-1.png");
     background-repeat: no-repeat;
     background-size:cover; */
     background-color: #60218b;
+}
+
+.btn-pagina {
+    padding: 12px 0px 12px 0px;
+    background-color: #60218b;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 a {
@@ -91,7 +99,7 @@ img {
     width: 100%;
 }
 
-p{
+p {
     text-align: center;
 }
 
